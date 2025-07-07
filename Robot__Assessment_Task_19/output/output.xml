@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-07T16:52:11.126125" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\Siva Kumar\Desktop\Robot__Assessment_Task_19\tests\login_test.robot">
+<test id="s1-t1" name="Verify Login Functionality" line="12">
+<kw name="Open Browser To Login Page" owner="login_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-07T16:52:11.810266" level="INFO">Opening browser 'Chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-07T16:52:11.809448" elapsed="3.654790"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-07T16:52:15.465222" elapsed="0.048911"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//input[@id="username"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-07T16:52:15.514464" elapsed="0.122494"/>
+</kw>
+<status status="PASS" start="2025-07-07T16:52:11.806710" elapsed="3.830588"/>
+</kw>
+<kw name="Input Credentials And Submit" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-07T16:52:15.639901" level="INFO">Typing text 'maria' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-07T16:52:15.639144" elapsed="0.209276"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-07T16:52:15.849217" level="INFO">Typing text 'thoushallnotpass' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-07T16:52:15.848781" elapsed="0.145289"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-07T16:52:15.995142" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-07T16:52:15.994538" elapsed="0.147824"/>
+</kw>
+<status status="PASS" start="2025-07-07T16:52:15.638244" elapsed="0.504462"/>
+</kw>
+<kw name="Verify Successful Login" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-07T16:52:16.144314" elapsed="1.982311"/>
+</kw>
+<status status="PASS" start="2025-07-07T16:52:16.143603" elapsed="1.983290"/>
+</kw>
+<kw name="Logout From Application" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-07T16:52:18.128750" level="INFO">Clicking button 'id=logout'.</msg>
+<arg>id=logout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-07T16:52:18.128308" elapsed="0.175666"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-07T16:52:18.304496" elapsed="2.387602"/>
+</kw>
+<status status="PASS" start="2025-07-07T16:52:18.127613" elapsed="2.564729"/>
+</kw>
+<status status="PASS" start="2025-07-07T16:52:11.804783" elapsed="8.888251"/>
+</test>
+<doc>Test to verify login functionality.</doc>
+<status status="PASS" start="2025-07-07T16:52:11.129096" elapsed="9.565544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
